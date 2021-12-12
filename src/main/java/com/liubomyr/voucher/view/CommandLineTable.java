@@ -1,6 +1,7 @@
 package com.liubomyr.voucher.view;
 
 import java.util.*;
+import java.util.logging.LogManager;
 
 public class CommandLineTable {
 
@@ -45,6 +46,7 @@ public class CommandLineTable {
     }
 
     public void print() {
+
         int[] maxWidths = headers != null ?
                 Arrays.stream(headers).mapToInt(String::length).toArray() : null;
 
@@ -95,15 +97,4 @@ public class CommandLineTable {
         System.out.println();
     }
 
-//    public static void main(String[] args) {
-//        //test code
-//        CommandLineTable st = new CommandLineTable();
-//        //st.setRightAlign(true);//if true then cell text is right aligned
-//        st.setShowVerticalLines(true);//if false (default) then no vertical lines are shown
-//        st.setHeaders("one", "two", "three");//optional - if not used then there will be no header and horizontal lines
-//        st.addRow("super", "broccoli", "flexible");
-//        st.addRow("assumption", "announcement", "reflection");
-//        st.addRow("logic", "pleasant", "wild");
-//        st.print();
-//    }
 }

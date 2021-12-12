@@ -4,7 +4,6 @@ import com.liubomyr.voucher.controller.VoucherController;
 import com.liubomyr.voucher.controller.VoucherInvoker;
 import com.liubomyr.voucher.view.MainScreen;
 
-import java.util.Scanner;
 
 public class Application {
 
@@ -12,8 +11,6 @@ public class Application {
 
     private VoucherController voucherController;
     private VoucherInvoker invoker;
-
-    Scanner in = new Scanner(System.in);
 
     Application() {
         invoker = new VoucherInvoker();
@@ -23,7 +20,6 @@ public class Application {
     }
 
     public void launch() {
-        int key;
         while (true) {
             switch (screen.showSelectionMenu()) {
                 case BOOK:
@@ -36,7 +32,7 @@ public class Application {
                     break;
                 case CANCEL: invoker.executeOperation(voucherController::cancel);
                     break;
-                case LIST: voucherController.show();
+                case LIST: invoker.executeOperation(voucherController::show);
                     break;
                 case EXIT: default: System.exit(0);
             }
