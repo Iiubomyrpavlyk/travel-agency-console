@@ -4,14 +4,18 @@
 package com.liubomyr.voucher.database.schema;
 
 
+import com.liubomyr.voucher.database.schema.tables.Country;
 import com.liubomyr.voucher.database.schema.tables.Currency;
 import com.liubomyr.voucher.database.schema.tables.Customer;
+import com.liubomyr.voucher.database.schema.tables.Hotel;
 import com.liubomyr.voucher.database.schema.tables.Nutrition;
 import com.liubomyr.voucher.database.schema.tables.Transport;
 import com.liubomyr.voucher.database.schema.tables.Type;
 import com.liubomyr.voucher.database.schema.tables.Voucher;
+import com.liubomyr.voucher.database.schema.tables.records.CountryRecord;
 import com.liubomyr.voucher.database.schema.tables.records.CurrencyRecord;
 import com.liubomyr.voucher.database.schema.tables.records.CustomerRecord;
+import com.liubomyr.voucher.database.schema.tables.records.HotelRecord;
 import com.liubomyr.voucher.database.schema.tables.records.NutritionRecord;
 import com.liubomyr.voucher.database.schema.tables.records.TransportRecord;
 import com.liubomyr.voucher.database.schema.tables.records.TypeRecord;
@@ -35,8 +39,10 @@ public class Keys {
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final UniqueKey<CountryRecord> KEY_COUNTRY_PRIMARY = Internal.createUniqueKey(Country.COUNTRY, DSL.name("KEY_country_PRIMARY"), new TableField[] { Country.COUNTRY.ID }, true);
     public static final UniqueKey<CurrencyRecord> KEY_CURRENCY_PRIMARY = Internal.createUniqueKey(Currency.CURRENCY, DSL.name("KEY_currency_PRIMARY"), new TableField[] { Currency.CURRENCY.CURRENCY_ID }, true);
     public static final UniqueKey<CustomerRecord> KEY_CUSTOMER_PRIMARY = Internal.createUniqueKey(Customer.CUSTOMER, DSL.name("KEY_customer_PRIMARY"), new TableField[] { Customer.CUSTOMER.CUST_ID }, true);
+    public static final UniqueKey<HotelRecord> KEY_HOTEL_PRIMARY = Internal.createUniqueKey(Hotel.HOTEL, DSL.name("KEY_hotel_PRIMARY"), new TableField[] { Hotel.HOTEL.ID }, true);
     public static final UniqueKey<NutritionRecord> KEY_NUTRITION_PRIMARY = Internal.createUniqueKey(Nutrition.NUTRITION, DSL.name("KEY_nutrition_PRIMARY"), new TableField[] { Nutrition.NUTRITION.NUTRITION_ID }, true);
     public static final UniqueKey<TransportRecord> KEY_TRANSPORT_PRIMARY = Internal.createUniqueKey(Transport.TRANSPORT, DSL.name("KEY_transport_PRIMARY"), new TableField[] { Transport.TRANSPORT.TRANSPORT_ID }, true);
     public static final UniqueKey<TypeRecord> KEY_TYPE_PRIMARY = Internal.createUniqueKey(Type.TYPE, DSL.name("KEY_type_PRIMARY"), new TableField[] { Type.TYPE.TYPE_ID }, true);
@@ -46,9 +52,12 @@ public class Keys {
     // FOREIGN KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final ForeignKey<HotelRecord, CountryRecord> COUNTRY_ID = Internal.createForeignKey(Hotel.HOTEL, DSL.name("COUNTRY_ID"), new TableField[] { Hotel.HOTEL.COUNTRY_ID }, Keys.KEY_COUNTRY_PRIMARY, new TableField[] { Country.COUNTRY.ID }, true);
     public static final ForeignKey<VoucherRecord, CustomerRecord> CUSTOMER_ID = Internal.createForeignKey(Voucher.VOUCHER, DSL.name("customer_id"), new TableField[] { Voucher.VOUCHER.CUSTOMER_ID }, Keys.KEY_CUSTOMER_PRIMARY, new TableField[] { Customer.CUSTOMER.CUST_ID }, true);
+    public static final ForeignKey<VoucherRecord, HotelRecord> HOTEL_ID = Internal.createForeignKey(Voucher.VOUCHER, DSL.name("hotel_id"), new TableField[] { Voucher.VOUCHER.HOTEL_ID }, Keys.KEY_HOTEL_PRIMARY, new TableField[] { Hotel.HOTEL.ID }, true);
     public static final ForeignKey<VoucherRecord, NutritionRecord> NUTRITION = Internal.createForeignKey(Voucher.VOUCHER, DSL.name("nutrition"), new TableField[] { Voucher.VOUCHER.NUTRITION }, Keys.KEY_NUTRITION_PRIMARY, new TableField[] { Nutrition.NUTRITION.NUTRITION_ID }, true);
     public static final ForeignKey<VoucherRecord, CurrencyRecord> PAYMENT = Internal.createForeignKey(Voucher.VOUCHER, DSL.name("payment"), new TableField[] { Voucher.VOUCHER.PAYMENT }, Keys.KEY_CURRENCY_PRIMARY, new TableField[] { Currency.CURRENCY.CURRENCY_ID }, true);
     public static final ForeignKey<VoucherRecord, TransportRecord> TRANSPORT = Internal.createForeignKey(Voucher.VOUCHER, DSL.name("transport"), new TableField[] { Voucher.VOUCHER.TRANSPORT }, Keys.KEY_TRANSPORT_PRIMARY, new TableField[] { Transport.TRANSPORT.TRANSPORT_ID }, true);
     public static final ForeignKey<VoucherRecord, TypeRecord> TYPE = Internal.createForeignKey(Voucher.VOUCHER, DSL.name("type"), new TableField[] { Voucher.VOUCHER.TYPE }, Keys.KEY_TYPE_PRIMARY, new TableField[] { Type.TYPE.TYPE_ID }, true);
+    public static final ForeignKey<VoucherRecord, CountryRecord> VOUCHER_FK = Internal.createForeignKey(Voucher.VOUCHER, DSL.name("voucher_FK"), new TableField[] { Voucher.VOUCHER.COUNTRY_ID }, Keys.KEY_COUNTRY_PRIMARY, new TableField[] { Country.COUNTRY.ID }, true);
 }

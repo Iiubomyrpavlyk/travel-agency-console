@@ -1,9 +1,6 @@
 package com.liubomyr.voucher.view;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class CommandLineTable {
 
@@ -27,8 +24,20 @@ public class CommandLineTable {
         joinSep = showVerticalLines ? "+" : " ";
     }
 
+    public void setHeaders(List<String> headers) {
+        String[] h = new String[headers.size()];
+        this.headers = headers.toArray(h);
+    }
+
     public void setHeaders(String... headers) {
         this.headers = headers;
+    }
+
+    public void addRow(List<String> cells) {
+        String[] row = new String[cells.size()];
+        row = cells.toArray(row);
+
+        rows.add(row);
     }
 
     public void addRow(String... cells) {

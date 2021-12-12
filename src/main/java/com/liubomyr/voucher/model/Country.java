@@ -1,16 +1,13 @@
 package com.liubomyr.voucher.model;
 
-public class Hotel {
+public class Country {
 
     private Integer ID;
     private String name;
 
-    private String country;
-
-    public Hotel(Integer ID, String name, String country) {
+    public Country(Integer ID, String name) {
         this.ID = ID;
         this.name = name;
-        this.country = country;
     }
 
     public Integer getID() {
@@ -27,13 +24,5 @@ public class Hotel {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 }

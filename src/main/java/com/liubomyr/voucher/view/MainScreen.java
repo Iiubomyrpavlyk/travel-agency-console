@@ -1,6 +1,5 @@
 package com.liubomyr.voucher.view;
 
-
 import de.codeshelf.consoleui.prompt.ConsolePrompt;
 import de.codeshelf.consoleui.prompt.InputResult;
 import de.codeshelf.consoleui.prompt.ListResult;
@@ -12,15 +11,15 @@ import org.jooq.Record;
 import org.jooq.Result;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.logging.LogManager;
 
+import static com.liubomyr.voucher.database.schema.tables.Country.COUNTRY;
 import static com.liubomyr.voucher.database.schema.tables.Customer.CUSTOMER;
+import static com.liubomyr.voucher.database.schema.tables.Hotel.HOTEL;
 import static com.liubomyr.voucher.database.schema.tables.Nutrition.NUTRITION;
 import static com.liubomyr.voucher.database.schema.tables.Transport.TRANSPORT;
 import static com.liubomyr.voucher.database.schema.tables.Type.TYPE;
-import static com.liubomyr.voucher.database.schema.tables.Voucher.VOUCHER;
 import static org.fusesource.jansi.Ansi.ansi;
 
 public class MainScreen {
@@ -138,6 +137,24 @@ public class MainScreen {
 
     public void showReserveMenu() {}
 
+
+    public void showVouchersList(List<String> headers, List<List<String>> result) {
+
+        if (headers == null || headers.isEmpty())
+            throw new IllegalArgumentException();
+
+        CommandLineTable table = new CommandLineTable();
+        table.setShowVerticalLines(true);
+
+        table.setHeaders(headers);
+
+        for (List<String> record : result)
+            table.addRow(record);
+
+        table.print();
+    }
+
+    @Deprecated
     public void showVouchersList(Result<?> result) {
         CommandLineTable table = new CommandLineTable();
         table.setShowVerticalLines(true);
@@ -145,7 +162,7 @@ public class MainScreen {
 
         for (Record record : result)
             table.addRow(record.getValue(CUSTOMER.FIRST_NAME), record.getValue(CUSTOMER.LAST_NAME), record.getValue(TYPE.NAME),
-                            record.getValue(VOUCHER.COUNTRY), record.getValue(VOUCHER.HOTEL), record.getValue(TRANSPORT.NAME),
+                            record.getValue(COUNTRY.NAME), record.getValue(HOTEL.NAME), record.getValue(TRANSPORT.NAME),
                             record.getValue(NUTRITION.NAME));
 
         table.print();

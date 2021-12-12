@@ -1,6 +1,5 @@
 package com.liubomyr.voucher.model;
 
-import java.util.Arrays;
 import java.util.Date;
 
 public class Voucher {
@@ -8,9 +7,10 @@ public class Voucher {
     private Client client;
     private VoucherType voucherType;
 
-    private String country;
-    private String hotel;
     private Transport transport;
+
+    private Hotel hotel;
+    private Country country;
 
     private Nutrition nutrition;
 
@@ -19,7 +19,7 @@ public class Voucher {
 
     private Cost cost;
 
-    public Voucher(Client client, VoucherType voucherType, String country, String hotel, Transport transport, Nutrition nutrition, Date arrivalDate, Date departureDate) {
+    public Voucher(Client client, VoucherType voucherType, Country country, Hotel hotel, Transport transport, Nutrition nutrition, Date arrivalDate, Date departureDate) {
         this.client = client;
         this.voucherType = voucherType;
         this.country = country;
@@ -54,19 +54,19 @@ public class Voucher {
         this.voucherType = voucherType;
     }
 
-    public String getCountry() {
+    public Country getCountry() {
         return country;
     }
 
-    public void setCountry(String country) {
+    public void setCountry(Country country) {
         this.country = country;
     }
 
-    public String getHotel() {
+    public Hotel getHotel() {
         return hotel;
     }
 
-    public void setHotel(String hotel) {
+    public void setHotel(Hotel hotel) {
         this.hotel = hotel;
     }
 

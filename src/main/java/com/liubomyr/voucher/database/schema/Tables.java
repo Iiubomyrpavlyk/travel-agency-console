@@ -4,8 +4,10 @@
 package com.liubomyr.voucher.database.schema;
 
 
+import com.liubomyr.voucher.database.schema.tables.Country;
 import com.liubomyr.voucher.database.schema.tables.Currency;
 import com.liubomyr.voucher.database.schema.tables.Customer;
+import com.liubomyr.voucher.database.schema.tables.Hotel;
 import com.liubomyr.voucher.database.schema.tables.Nutrition;
 import com.liubomyr.voucher.database.schema.tables.Transport;
 import com.liubomyr.voucher.database.schema.tables.Type;
@@ -19,6 +21,11 @@ import com.liubomyr.voucher.database.schema.tables.Voucher;
 public class Tables {
 
     /**
+     * The table <code>voucher_agency.country</code>.
+     */
+    public static final Country COUNTRY = Country.COUNTRY;
+
+    /**
      * The table <code>voucher_agency.currency</code>.
      */
     public static final Currency CURRENCY = Currency.CURRENCY;
@@ -27,6 +34,11 @@ public class Tables {
      * The table <code>voucher_agency.customer</code>.
      */
     public static final Customer CUSTOMER = Customer.CUSTOMER;
+
+    /**
+     * The table <code>voucher_agency.hotel</code>.
+     */
+    public static final Hotel HOTEL = Hotel.HOTEL;
 
     /**
      * The table <code>voucher_agency.nutrition</code>.

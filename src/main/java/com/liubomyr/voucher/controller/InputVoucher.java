@@ -1,13 +1,8 @@
 package com.liubomyr.voucher.controller;
 
 import com.liubomyr.voucher.Main;
-import com.liubomyr.voucher.controller.service.NutritionService;
-import com.liubomyr.voucher.controller.service.Service;
-import com.liubomyr.voucher.controller.service.TransportService;
-import com.liubomyr.voucher.controller.service.VoucherTypeService;
-import com.liubomyr.voucher.database.schema.tables.records.NutritionRecord;
-import com.liubomyr.voucher.database.schema.tables.records.TransportRecord;
-import com.liubomyr.voucher.database.schema.tables.records.TypeRecord;
+import com.liubomyr.voucher.controller.service.*;
+import com.liubomyr.voucher.database.schema.tables.records.*;
 import com.liubomyr.voucher.model.*;
 import com.liubomyr.voucher.view.MainScreen;
 import org.jooq.Condition;
@@ -16,10 +11,10 @@ import org.jooq.Result;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
+import static com.liubomyr.voucher.database.schema.tables.Country.COUNTRY;
+import static com.liubomyr.voucher.database.schema.tables.Hotel.HOTEL;
 import static com.liubomyr.voucher.database.schema.tables.Nutrition.NUTRITION;
 import static com.liubomyr.voucher.database.schema.tables.Transport.TRANSPORT;
 import static com.liubomyr.voucher.database.schema.tables.Type.TYPE;
@@ -109,6 +104,63 @@ public class InputVoucher {
 
         return null;
     }
+
+    public static Country inputCountry() {
+
+        Service service = new CountryService();
+        Result<CountryRecord> result = (Result<CountryRecord>) service.select();
+
+        List<String> headers = new ArrayList<>();
+        headers.add("ID");
+        headers.add("COUNTRY");
+
+        List<List<String>> rows = new ArrayList<>();
+
+        for (CountryRecord record: result) {
+            List<String> row = new ArrayList<>();
+            row.add(String.valueOf(record.getValue(COUNTRY.ID)));
+            row.add(record.getValue(COUNTRY.NAME));
+            rows.add(row);
+        }
+
+        screen.showVouchersList(headers, rows);
+
+        String selectedCountry = screen.getInput("country", "Choose a country: ");
+        Integer countryID = Integer.parseInt(selectedCountry);
+
+        Result<CountryRecord> country = (Result<CountryRecord>) service.select(COUNTRY.ID.eq(countryID));
+
+        return new Country(country.get(0).getValue(COUNTRY.ID), country.get(0).getValue(COUNTRY.NAME));
+    }
+
+    public static Hotel inputHotel(Integer countryID) {
+
+        Service service = new HotelService();
+        Result<HotelRecord> result = (Result<HotelRecord>) service.select(HOTEL.COUNTRY_ID.eq(countryID));
+
+        List<String> headers = new ArrayList<>();
+        headers.add("ID");
+        headers.add("HOTEL");
+
+        List<List<String>> rows = new ArrayList<>();
+        for (HotelRecord record: result) {
+            List<String> row = new ArrayList<>();
+            row.add(String.valueOf(record.getValue(HOTEL.ID)));
+            row.add(record.getValue(HOTEL.NAME));
+            rows.add(row);
+        }
+
+        screen.showVouchersList(headers, rows);
+
+        String selectedHotel = screen.getInput("hotel", "Choose a hotel: ");
+        Integer hotelID = Integer.parseInt(selectedHotel);
+
+        Result<HotelRecord> select = (Result<HotelRecord>) service.select(HOTEL.ID.eq(hotelID));
+        Result<CountryRecord> country = (Result<CountryRecord>) new CountryService().select(COUNTRY.ID.eq(countryID));
+
+        return new Hotel(hotelID, select.get(0).getValue(HOTEL.NAME), country.get(0).getValue(COUNTRY.NAME));
+    }
+
 
 
 

@@ -4,8 +4,10 @@
 package com.liubomyr.voucher.database.schema;
 
 
+import com.liubomyr.voucher.database.schema.tables.Country;
 import com.liubomyr.voucher.database.schema.tables.Currency;
 import com.liubomyr.voucher.database.schema.tables.Customer;
+import com.liubomyr.voucher.database.schema.tables.Hotel;
 import com.liubomyr.voucher.database.schema.tables.Nutrition;
 import com.liubomyr.voucher.database.schema.tables.Transport;
 import com.liubomyr.voucher.database.schema.tables.Type;
@@ -33,6 +35,11 @@ public class VoucherAgency extends SchemaImpl {
     public static final VoucherAgency VOUCHER_AGENCY = new VoucherAgency();
 
     /**
+     * The table <code>voucher_agency.country</code>.
+     */
+    public final Country COUNTRY = Country.COUNTRY;
+
+    /**
      * The table <code>voucher_agency.currency</code>.
      */
     public final Currency CURRENCY = Currency.CURRENCY;
@@ -41,6 +48,11 @@ public class VoucherAgency extends SchemaImpl {
      * The table <code>voucher_agency.customer</code>.
      */
     public final Customer CUSTOMER = Customer.CUSTOMER;
+
+    /**
+     * The table <code>voucher_agency.hotel</code>.
+     */
+    public final Hotel HOTEL = Hotel.HOTEL;
 
     /**
      * The table <code>voucher_agency.nutrition</code>.
@@ -78,8 +90,10 @@ public class VoucherAgency extends SchemaImpl {
     @Override
     public final List<Table<?>> getTables() {
         return Arrays.asList(
+            Country.COUNTRY,
             Currency.CURRENCY,
             Customer.CUSTOMER,
+            Hotel.HOTEL,
             Nutrition.NUTRITION,
             Transport.TRANSPORT,
             Type.TYPE,

@@ -75,16 +75,6 @@ public class Voucher extends TableImpl<VoucherRecord> {
     public final TableField<VoucherRecord, LocalDate> DEPARTURE = createField(DSL.name("DEPARTURE"), SQLDataType.LOCALDATE.nullable(false), this, "");
 
     /**
-     * The column <code>voucher_agency.voucher.HOTEL</code>.
-     */
-    public final TableField<VoucherRecord, String> HOTEL = createField(DSL.name("HOTEL"), SQLDataType.VARCHAR(50), this, "");
-
-    /**
-     * The column <code>voucher_agency.voucher.COUNTRY</code>.
-     */
-    public final TableField<VoucherRecord, String> COUNTRY = createField(DSL.name("COUNTRY"), SQLDataType.VARCHAR(50), this, "");
-
-    /**
      * The column <code>voucher_agency.voucher.NUTRITION</code>.
      */
     public final TableField<VoucherRecord, Integer> NUTRITION = createField(DSL.name("NUTRITION"), SQLDataType.INTEGER, this, "");
@@ -98,6 +88,16 @@ public class Voucher extends TableImpl<VoucherRecord> {
      * The column <code>voucher_agency.voucher.PAYMENT</code>.
      */
     public final TableField<VoucherRecord, Integer> PAYMENT = createField(DSL.name("PAYMENT"), SQLDataType.INTEGER.nullable(false), this, "");
+
+    /**
+     * The column <code>voucher_agency.voucher.HOTEL_ID</code>.
+     */
+    public final TableField<VoucherRecord, Integer> HOTEL_ID = createField(DSL.name("HOTEL_ID"), SQLDataType.INTEGER.nullable(false), this, "");
+
+    /**
+     * The column <code>voucher_agency.voucher.COUNTRY_ID</code>.
+     */
+    public final TableField<VoucherRecord, Integer> COUNTRY_ID = createField(DSL.name("COUNTRY_ID"), SQLDataType.INTEGER.nullable(false), this, "");
 
     private Voucher(Name alias, Table<VoucherRecord> aliased) {
         this(alias, aliased, null);
@@ -149,7 +149,7 @@ public class Voucher extends TableImpl<VoucherRecord> {
 
     @Override
     public List<ForeignKey<VoucherRecord, ?>> getReferences() {
-        return Arrays.asList(Keys.CUSTOMER_ID, Keys.TYPE, Keys.NUTRITION, Keys.TRANSPORT, Keys.PAYMENT);
+        return Arrays.asList(Keys.CUSTOMER_ID, Keys.TYPE, Keys.NUTRITION, Keys.TRANSPORT, Keys.PAYMENT, Keys.HOTEL_ID, Keys.VOUCHER_FK);
     }
 
     private transient Customer _customer;
@@ -157,6 +157,8 @@ public class Voucher extends TableImpl<VoucherRecord> {
     private transient Nutrition _nutrition;
     private transient Transport _transport;
     private transient Currency _currency;
+    private transient Hotel _hotel;
+    private transient Country _country;
 
     public Customer customer() {
         if (_customer == null)
@@ -193,6 +195,20 @@ public class Voucher extends TableImpl<VoucherRecord> {
         return _currency;
     }
 
+    public Hotel hotel() {
+        if (_hotel == null)
+            _hotel = new Hotel(this, Keys.HOTEL_ID);
+
+        return _hotel;
+    }
+
+    public Country country() {
+        if (_country == null)
+            _country = new Country(this, Keys.VOUCHER_FK);
+
+        return _country;
+    }
+
     @Override
     public Voucher as(String alias) {
         return new Voucher(DSL.name(alias), this);
@@ -224,7 +240,7 @@ public class Voucher extends TableImpl<VoucherRecord> {
     // -------------------------------------------------------------------------
 
     @Override
-    public Row10<Integer, Integer, Integer, LocalDate, LocalDate, String, String, Integer, Integer, Integer> fieldsRow() {
+    public Row10<Integer, Integer, Integer, LocalDate, LocalDate, Integer, Integer, Integer, Integer, Integer> fieldsRow() {
         return (Row10) super.fieldsRow();
     }
 }

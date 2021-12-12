@@ -54,10 +54,10 @@ public class VoucherService implements Service {
             DSLContext create = Database.getDSLContextInstance();
 
             result = create.insertInto( VOUCHER, VOUCHER.CUSTOMER_ID, VOUCHER.TYPE, VOUCHER.ARRIVAL, VOUCHER.DEPARTURE,
-                                        VOUCHER.HOTEL, VOUCHER.COUNTRY, VOUCHER.NUTRITION, VOUCHER.TRANSPORT, VOUCHER.PAYMENT)
+                                        VOUCHER.NUTRITION, VOUCHER.TRANSPORT, VOUCHER.PAYMENT, VOUCHER.COUNTRY_ID, VOUCHER.HOTEL_ID)
                             .values(customerID, voucherType,  new Date(voucher.getArrivalDate().getTime()).toLocalDate(),
                                             new Date(voucher.getDepartureDate().getTime()).toLocalDate(),
-                                            voucher.getHotel(), voucher.getCountry(), nutrition, transport, 1)
+                                            nutrition, transport, 1, voucher.getCountry().getID(), voucher.getHotel().getID())
                     .returningResult(VOUCHER.VOUCHER_ID)
                     .fetch();
 
