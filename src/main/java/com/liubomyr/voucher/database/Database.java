@@ -10,9 +10,9 @@ import java.sql.SQLException;
 
 public class Database {
 
-    public static final String URL = "jdbc:mysql://localhost:3306/voucher_agency";
-    public static final String USER = "root";
-    public static final String PASSWORD = "root";
+    public static final String URL = "jdbc:mysql://sql4.freemysqlhosting.net:3306/sql4458432";
+    public static final String USER = "sql4458432";
+    public static final String PASSWORD = "7uCCB9zwEM";
 
     static  Connection connection;
 

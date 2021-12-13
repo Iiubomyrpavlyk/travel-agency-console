@@ -5,7 +5,7 @@ package com.liubomyr.voucher.database.schema.tables;
 
 
 import com.liubomyr.voucher.database.schema.Keys;
-import com.liubomyr.voucher.database.schema.VoucherAgency;
+import com.liubomyr.voucher.database.schema.Sql4458432;
 import com.liubomyr.voucher.database.schema.tables.records.CurrencyRecord;
 
 import org.jooq.Field;
@@ -33,7 +33,7 @@ public class Currency extends TableImpl<CurrencyRecord> {
     private static final long serialVersionUID = 1L;
 
     /**
-     * The reference instance of <code>voucher_agency.currency</code>
+     * The reference instance of <code>sql4458432.currency</code>
      */
     public static final Currency CURRENCY = new Currency();
 
@@ -46,17 +46,17 @@ public class Currency extends TableImpl<CurrencyRecord> {
     }
 
     /**
-     * The column <code>voucher_agency.currency.CURRENCY_ID</code>.
+     * The column <code>sql4458432.currency.CURRENCY_ID</code>.
      */
     public final TableField<CurrencyRecord, Integer> CURRENCY_ID = createField(DSL.name("CURRENCY_ID"), SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>voucher_agency.currency.NAME</code>.
+     * The column <code>sql4458432.currency.NAME</code>.
      */
     public final TableField<CurrencyRecord, String> NAME = createField(DSL.name("NAME"), SQLDataType.VARCHAR(20).nullable(false), this, "");
 
     /**
-     * The column <code>voucher_agency.currency.DESCRIPTION</code>.
+     * The column <code>sql4458432.currency.DESCRIPTION</code>.
      */
     public final TableField<CurrencyRecord, String> DESCRIPTION = createField(DSL.name("DESCRIPTION"), SQLDataType.VARCHAR(20), this, "");
 
@@ -69,21 +69,21 @@ public class Currency extends TableImpl<CurrencyRecord> {
     }
 
     /**
-     * Create an aliased <code>voucher_agency.currency</code> table reference
+     * Create an aliased <code>sql4458432.currency</code> table reference
      */
     public Currency(String alias) {
         this(DSL.name(alias), CURRENCY);
     }
 
     /**
-     * Create an aliased <code>voucher_agency.currency</code> table reference
+     * Create an aliased <code>sql4458432.currency</code> table reference
      */
     public Currency(Name alias) {
         this(alias, CURRENCY);
     }
 
     /**
-     * Create a <code>voucher_agency.currency</code> table reference
+     * Create a <code>sql4458432.currency</code> table reference
      */
     public Currency() {
         this(DSL.name("currency"), null);
@@ -95,7 +95,7 @@ public class Currency extends TableImpl<CurrencyRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : VoucherAgency.VOUCHER_AGENCY;
+        return aliased() ? null : Sql4458432.SQL4458432;
     }
 
     @Override

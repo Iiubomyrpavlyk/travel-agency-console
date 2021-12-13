@@ -30,7 +30,7 @@ import org.jooq.impl.Internal;
 
 /**
  * A class modelling foreign key relationships and constraints of tables in
- * voucher_agency.
+ * sql4458432.
  */
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Keys {

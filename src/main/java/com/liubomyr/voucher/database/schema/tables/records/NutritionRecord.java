@@ -22,42 +22,42 @@ public class NutritionRecord extends UpdatableRecordImpl<NutritionRecord> implem
     private static final long serialVersionUID = 1L;
 
     /**
-     * Setter for <code>voucher_agency.nutrition.NUTRITION_ID</code>.
+     * Setter for <code>sql4458432.nutrition.NUTRITION_ID</code>.
      */
     public void setNutritionId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.nutrition.NUTRITION_ID</code>.
+     * Getter for <code>sql4458432.nutrition.NUTRITION_ID</code>.
      */
     public Integer getNutritionId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>voucher_agency.nutrition.NAME</code>.
+     * Setter for <code>sql4458432.nutrition.NAME</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.nutrition.NAME</code>.
+     * Getter for <code>sql4458432.nutrition.NAME</code>.
      */
     public String getName() {
         return (String) get(1);
     }
 
     /**
-     * Setter for <code>voucher_agency.nutrition.description</code>.
+     * Setter for <code>sql4458432.nutrition.description</code>.
      */
     public void setDescription(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.nutrition.description</code>.
+     * Getter for <code>sql4458432.nutrition.description</code>.
      */
     public String getDescription() {
         return (String) get(2);

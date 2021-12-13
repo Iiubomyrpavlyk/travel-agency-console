@@ -22,11 +22,9 @@ public class Application {
     public void launch() {
         while (true) {
             switch (screen.showSelectionMenu()) {
-                case BOOK:
-                    invoker.executeOperation(voucherController::book);
+                case BOOK: invoker.executeOperation(voucherController::book);
                     break;
-                case RESERVE:
-                    invoker.executeOperation(voucherController::reserve);
+                case RESERVE: invoker.executeOperation(voucherController::reserve);
                     break;
                 case MODIFY: invoker.executeOperation(voucherController::modify);
                     break;

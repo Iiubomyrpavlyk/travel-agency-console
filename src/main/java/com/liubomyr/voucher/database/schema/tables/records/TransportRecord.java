@@ -22,28 +22,28 @@ public class TransportRecord extends UpdatableRecordImpl<TransportRecord> implem
     private static final long serialVersionUID = 1L;
 
     /**
-     * Setter for <code>voucher_agency.transport.TRANSPORT_ID</code>.
+     * Setter for <code>sql4458432.transport.TRANSPORT_ID</code>.
      */
     public void setTransportId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.transport.TRANSPORT_ID</code>.
+     * Getter for <code>sql4458432.transport.TRANSPORT_ID</code>.
      */
     public Integer getTransportId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>voucher_agency.transport.NAME</code>.
+     * Setter for <code>sql4458432.transport.NAME</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.transport.NAME</code>.
+     * Getter for <code>sql4458432.transport.NAME</code>.
      */
     public String getName() {
         return (String) get(1);

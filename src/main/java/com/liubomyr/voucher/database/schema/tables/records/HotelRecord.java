@@ -22,42 +22,42 @@ public class HotelRecord extends UpdatableRecordImpl<HotelRecord> implements Rec
     private static final long serialVersionUID = 1L;
 
     /**
-     * Setter for <code>voucher_agency.hotel.ID</code>.
+     * Setter for <code>sql4458432.hotel.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.hotel.ID</code>.
+     * Getter for <code>sql4458432.hotel.ID</code>.
      */
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>voucher_agency.hotel.NAME</code>.
+     * Setter for <code>sql4458432.hotel.NAME</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.hotel.NAME</code>.
+     * Getter for <code>sql4458432.hotel.NAME</code>.
      */
     public String getName() {
         return (String) get(1);
     }
 
     /**
-     * Setter for <code>voucher_agency.hotel.COUNTRY_ID</code>.
+     * Setter for <code>sql4458432.hotel.COUNTRY_ID</code>.
      */
     public void setCountryId(Integer value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.hotel.COUNTRY_ID</code>.
+     * Getter for <code>sql4458432.hotel.COUNTRY_ID</code>.
      */
     public Integer getCountryId() {
         return (Integer) get(2);

@@ -5,7 +5,7 @@ package com.liubomyr.voucher.database.schema.tables;
 
 
 import com.liubomyr.voucher.database.schema.Keys;
-import com.liubomyr.voucher.database.schema.VoucherAgency;
+import com.liubomyr.voucher.database.schema.Sql4458432;
 import com.liubomyr.voucher.database.schema.tables.records.TypeRecord;
 
 import org.jooq.Field;
@@ -33,7 +33,7 @@ public class Type extends TableImpl<TypeRecord> {
     private static final long serialVersionUID = 1L;
 
     /**
-     * The reference instance of <code>voucher_agency.type</code>
+     * The reference instance of <code>sql4458432.type</code>
      */
     public static final Type TYPE = new Type();
 
@@ -46,12 +46,12 @@ public class Type extends TableImpl<TypeRecord> {
     }
 
     /**
-     * The column <code>voucher_agency.type.TYPE_ID</code>.
+     * The column <code>sql4458432.type.TYPE_ID</code>.
      */
     public final TableField<TypeRecord, Integer> TYPE_ID = createField(DSL.name("TYPE_ID"), SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>voucher_agency.type.NAME</code>.
+     * The column <code>sql4458432.type.NAME</code>.
      */
     public final TableField<TypeRecord, String> NAME = createField(DSL.name("NAME"), SQLDataType.VARCHAR(20), this, "");
 
@@ -64,21 +64,21 @@ public class Type extends TableImpl<TypeRecord> {
     }
 
     /**
-     * Create an aliased <code>voucher_agency.type</code> table reference
+     * Create an aliased <code>sql4458432.type</code> table reference
      */
     public Type(String alias) {
         this(DSL.name(alias), TYPE);
     }
 
     /**
-     * Create an aliased <code>voucher_agency.type</code> table reference
+     * Create an aliased <code>sql4458432.type</code> table reference
      */
     public Type(Name alias) {
         this(alias, TYPE);
     }
 
     /**
-     * Create a <code>voucher_agency.type</code> table reference
+     * Create a <code>sql4458432.type</code> table reference
      */
     public Type() {
         this(DSL.name("type"), null);
@@ -90,7 +90,7 @@ public class Type extends TableImpl<TypeRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : VoucherAgency.VOUCHER_AGENCY;
+        return aliased() ? null : Sql4458432.SQL4458432;
     }
 
     @Override

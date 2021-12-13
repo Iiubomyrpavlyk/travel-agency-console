@@ -5,7 +5,7 @@ package com.liubomyr.voucher.database.schema.tables;
 
 
 import com.liubomyr.voucher.database.schema.Keys;
-import com.liubomyr.voucher.database.schema.VoucherAgency;
+import com.liubomyr.voucher.database.schema.Sql4458432;
 import com.liubomyr.voucher.database.schema.tables.records.TransportRecord;
 
 import org.jooq.Field;
@@ -33,7 +33,7 @@ public class Transport extends TableImpl<TransportRecord> {
     private static final long serialVersionUID = 1L;
 
     /**
-     * The reference instance of <code>voucher_agency.transport</code>
+     * The reference instance of <code>sql4458432.transport</code>
      */
     public static final Transport TRANSPORT = new Transport();
 
@@ -46,12 +46,12 @@ public class Transport extends TableImpl<TransportRecord> {
     }
 
     /**
-     * The column <code>voucher_agency.transport.TRANSPORT_ID</code>.
+     * The column <code>sql4458432.transport.TRANSPORT_ID</code>.
      */
     public final TableField<TransportRecord, Integer> TRANSPORT_ID = createField(DSL.name("TRANSPORT_ID"), SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>voucher_agency.transport.NAME</code>.
+     * The column <code>sql4458432.transport.NAME</code>.
      */
     public final TableField<TransportRecord, String> NAME = createField(DSL.name("NAME"), SQLDataType.VARCHAR(20), this, "");
 
@@ -64,21 +64,21 @@ public class Transport extends TableImpl<TransportRecord> {
     }
 
     /**
-     * Create an aliased <code>voucher_agency.transport</code> table reference
+     * Create an aliased <code>sql4458432.transport</code> table reference
      */
     public Transport(String alias) {
         this(DSL.name(alias), TRANSPORT);
     }
 
     /**
-     * Create an aliased <code>voucher_agency.transport</code> table reference
+     * Create an aliased <code>sql4458432.transport</code> table reference
      */
     public Transport(Name alias) {
         this(alias, TRANSPORT);
     }
 
     /**
-     * Create a <code>voucher_agency.transport</code> table reference
+     * Create a <code>sql4458432.transport</code> table reference
      */
     public Transport() {
         this(DSL.name("transport"), null);
@@ -90,7 +90,7 @@ public class Transport extends TableImpl<TransportRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : VoucherAgency.VOUCHER_AGENCY;
+        return aliased() ? null : Sql4458432.SQL4458432;
     }
 
     @Override

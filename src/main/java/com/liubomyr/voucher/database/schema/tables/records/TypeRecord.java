@@ -22,28 +22,28 @@ public class TypeRecord extends UpdatableRecordImpl<TypeRecord> implements Recor
     private static final long serialVersionUID = 1L;
 
     /**
-     * Setter for <code>voucher_agency.type.TYPE_ID</code>.
+     * Setter for <code>sql4458432.type.TYPE_ID</code>.
      */
     public void setTypeId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.type.TYPE_ID</code>.
+     * Getter for <code>sql4458432.type.TYPE_ID</code>.
      */
     public Integer getTypeId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>voucher_agency.type.NAME</code>.
+     * Setter for <code>sql4458432.type.NAME</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.type.NAME</code>.
+     * Getter for <code>sql4458432.type.NAME</code>.
      */
     public String getName() {
         return (String) get(1);

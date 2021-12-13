@@ -24,140 +24,140 @@ public class VoucherRecord extends UpdatableRecordImpl<VoucherRecord> implements
     private static final long serialVersionUID = 1L;
 
     /**
-     * Setter for <code>voucher_agency.voucher.VOUCHER_ID</code>.
+     * Setter for <code>sql4458432.voucher.VOUCHER_ID</code>.
      */
     public void setVoucherId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.voucher.VOUCHER_ID</code>.
+     * Getter for <code>sql4458432.voucher.VOUCHER_ID</code>.
      */
     public Integer getVoucherId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>voucher_agency.voucher.CUSTOMER_ID</code>.
+     * Setter for <code>sql4458432.voucher.CUSTOMER_ID</code>.
      */
     public void setCustomerId(Integer value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.voucher.CUSTOMER_ID</code>.
+     * Getter for <code>sql4458432.voucher.CUSTOMER_ID</code>.
      */
     public Integer getCustomerId() {
         return (Integer) get(1);
     }
 
     /**
-     * Setter for <code>voucher_agency.voucher.TYPE</code>.
+     * Setter for <code>sql4458432.voucher.TYPE</code>.
      */
     public void setType(Integer value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.voucher.TYPE</code>.
+     * Getter for <code>sql4458432.voucher.TYPE</code>.
      */
     public Integer getType() {
         return (Integer) get(2);
     }
 
     /**
-     * Setter for <code>voucher_agency.voucher.ARRIVAL</code>.
+     * Setter for <code>sql4458432.voucher.ARRIVAL</code>.
      */
     public void setArrival(LocalDate value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.voucher.ARRIVAL</code>.
+     * Getter for <code>sql4458432.voucher.ARRIVAL</code>.
      */
     public LocalDate getArrival() {
         return (LocalDate) get(3);
     }
 
     /**
-     * Setter for <code>voucher_agency.voucher.DEPARTURE</code>.
+     * Setter for <code>sql4458432.voucher.DEPARTURE</code>.
      */
     public void setDeparture(LocalDate value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.voucher.DEPARTURE</code>.
+     * Getter for <code>sql4458432.voucher.DEPARTURE</code>.
      */
     public LocalDate getDeparture() {
         return (LocalDate) get(4);
     }
 
     /**
-     * Setter for <code>voucher_agency.voucher.NUTRITION</code>.
+     * Setter for <code>sql4458432.voucher.NUTRITION</code>.
      */
     public void setNutrition(Integer value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.voucher.NUTRITION</code>.
+     * Getter for <code>sql4458432.voucher.NUTRITION</code>.
      */
     public Integer getNutrition() {
         return (Integer) get(5);
     }
 
     /**
-     * Setter for <code>voucher_agency.voucher.TRANSPORT</code>.
+     * Setter for <code>sql4458432.voucher.TRANSPORT</code>.
      */
     public void setTransport(Integer value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.voucher.TRANSPORT</code>.
+     * Getter for <code>sql4458432.voucher.TRANSPORT</code>.
      */
     public Integer getTransport() {
         return (Integer) get(6);
     }
 
     /**
-     * Setter for <code>voucher_agency.voucher.PAYMENT</code>.
+     * Setter for <code>sql4458432.voucher.PAYMENT</code>.
      */
     public void setPayment(Integer value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.voucher.PAYMENT</code>.
+     * Getter for <code>sql4458432.voucher.PAYMENT</code>.
      */
     public Integer getPayment() {
         return (Integer) get(7);
     }
 
     /**
-     * Setter for <code>voucher_agency.voucher.HOTEL_ID</code>.
+     * Setter for <code>sql4458432.voucher.HOTEL_ID</code>.
      */
     public void setHotelId(Integer value) {
         set(8, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.voucher.HOTEL_ID</code>.
+     * Getter for <code>sql4458432.voucher.HOTEL_ID</code>.
      */
     public Integer getHotelId() {
         return (Integer) get(8);
     }
 
     /**
-     * Setter for <code>voucher_agency.voucher.COUNTRY_ID</code>.
+     * Setter for <code>sql4458432.voucher.COUNTRY_ID</code>.
      */
     public void setCountryId(Integer value) {
         set(9, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.voucher.COUNTRY_ID</code>.
+     * Getter for <code>sql4458432.voucher.COUNTRY_ID</code>.
      */
     public Integer getCountryId() {
         return (Integer) get(9);

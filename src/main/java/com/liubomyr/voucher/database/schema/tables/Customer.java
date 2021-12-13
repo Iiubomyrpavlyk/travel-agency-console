@@ -5,7 +5,7 @@ package com.liubomyr.voucher.database.schema.tables;
 
 
 import com.liubomyr.voucher.database.schema.Keys;
-import com.liubomyr.voucher.database.schema.VoucherAgency;
+import com.liubomyr.voucher.database.schema.Sql4458432;
 import com.liubomyr.voucher.database.schema.tables.records.CustomerRecord;
 
 import org.jooq.Field;
@@ -33,7 +33,7 @@ public class Customer extends TableImpl<CustomerRecord> {
     private static final long serialVersionUID = 1L;
 
     /**
-     * The reference instance of <code>voucher_agency.customer</code>
+     * The reference instance of <code>sql4458432.customer</code>
      */
     public static final Customer CUSTOMER = new Customer();
 
@@ -46,27 +46,27 @@ public class Customer extends TableImpl<CustomerRecord> {
     }
 
     /**
-     * The column <code>voucher_agency.customer.CUST_ID</code>.
+     * The column <code>sql4458432.customer.CUST_ID</code>.
      */
     public final TableField<CustomerRecord, Integer> CUST_ID = createField(DSL.name("CUST_ID"), SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>voucher_agency.customer.FIRST_NAME</code>.
+     * The column <code>sql4458432.customer.FIRST_NAME</code>.
      */
     public final TableField<CustomerRecord, String> FIRST_NAME = createField(DSL.name("FIRST_NAME"), SQLDataType.VARCHAR(20), this, "");
 
     /**
-     * The column <code>voucher_agency.customer.LAST_NAME</code>.
+     * The column <code>sql4458432.customer.LAST_NAME</code>.
      */
     public final TableField<CustomerRecord, String> LAST_NAME = createField(DSL.name("LAST_NAME"), SQLDataType.VARCHAR(20), this, "");
 
     /**
-     * The column <code>voucher_agency.customer.PASSPORT_CODE</code>.
+     * The column <code>sql4458432.customer.PASSPORT_CODE</code>.
      */
     public final TableField<CustomerRecord, Integer> PASSPORT_CODE = createField(DSL.name("PASSPORT_CODE"), SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>voucher_agency.customer.EMAIL</code>.
+     * The column <code>sql4458432.customer.EMAIL</code>.
      */
     public final TableField<CustomerRecord, String> EMAIL = createField(DSL.name("EMAIL"), SQLDataType.VARCHAR(50), this, "");
 
@@ -79,21 +79,21 @@ public class Customer extends TableImpl<CustomerRecord> {
     }
 
     /**
-     * Create an aliased <code>voucher_agency.customer</code> table reference
+     * Create an aliased <code>sql4458432.customer</code> table reference
      */
     public Customer(String alias) {
         this(DSL.name(alias), CUSTOMER);
     }
 
     /**
-     * Create an aliased <code>voucher_agency.customer</code> table reference
+     * Create an aliased <code>sql4458432.customer</code> table reference
      */
     public Customer(Name alias) {
         this(alias, CUSTOMER);
     }
 
     /**
-     * Create a <code>voucher_agency.customer</code> table reference
+     * Create a <code>sql4458432.customer</code> table reference
      */
     public Customer() {
         this(DSL.name("customer"), null);
@@ -105,7 +105,7 @@ public class Customer extends TableImpl<CustomerRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : VoucherAgency.VOUCHER_AGENCY;
+        return aliased() ? null : Sql4458432.SQL4458432;
     }
 
     @Override

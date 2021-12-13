@@ -22,70 +22,70 @@ public class CustomerRecord extends UpdatableRecordImpl<CustomerRecord> implemen
     private static final long serialVersionUID = 1L;
 
     /**
-     * Setter for <code>voucher_agency.customer.CUST_ID</code>.
+     * Setter for <code>sql4458432.customer.CUST_ID</code>.
      */
     public void setCustId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.customer.CUST_ID</code>.
+     * Getter for <code>sql4458432.customer.CUST_ID</code>.
      */
     public Integer getCustId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>voucher_agency.customer.FIRST_NAME</code>.
+     * Setter for <code>sql4458432.customer.FIRST_NAME</code>.
      */
     public void setFirstName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.customer.FIRST_NAME</code>.
+     * Getter for <code>sql4458432.customer.FIRST_NAME</code>.
      */
     public String getFirstName() {
         return (String) get(1);
     }
 
     /**
-     * Setter for <code>voucher_agency.customer.LAST_NAME</code>.
+     * Setter for <code>sql4458432.customer.LAST_NAME</code>.
      */
     public void setLastName(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.customer.LAST_NAME</code>.
+     * Getter for <code>sql4458432.customer.LAST_NAME</code>.
      */
     public String getLastName() {
         return (String) get(2);
     }
 
     /**
-     * Setter for <code>voucher_agency.customer.PASSPORT_CODE</code>.
+     * Setter for <code>sql4458432.customer.PASSPORT_CODE</code>.
      */
     public void setPassportCode(Integer value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.customer.PASSPORT_CODE</code>.
+     * Getter for <code>sql4458432.customer.PASSPORT_CODE</code>.
      */
     public Integer getPassportCode() {
         return (Integer) get(3);
     }
 
     /**
-     * Setter for <code>voucher_agency.customer.EMAIL</code>.
+     * Setter for <code>sql4458432.customer.EMAIL</code>.
      */
     public void setEmail(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.customer.EMAIL</code>.
+     * Getter for <code>sql4458432.customer.EMAIL</code>.
      */
     public String getEmail() {
         return (String) get(4);

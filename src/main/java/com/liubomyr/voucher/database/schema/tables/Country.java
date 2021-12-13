@@ -5,7 +5,7 @@ package com.liubomyr.voucher.database.schema.tables;
 
 
 import com.liubomyr.voucher.database.schema.Keys;
-import com.liubomyr.voucher.database.schema.VoucherAgency;
+import com.liubomyr.voucher.database.schema.Sql4458432;
 import com.liubomyr.voucher.database.schema.tables.records.CountryRecord;
 
 import org.jooq.Field;
@@ -33,7 +33,7 @@ public class Country extends TableImpl<CountryRecord> {
     private static final long serialVersionUID = 1L;
 
     /**
-     * The reference instance of <code>voucher_agency.country</code>
+     * The reference instance of <code>sql4458432.country</code>
      */
     public static final Country COUNTRY = new Country();
 
@@ -46,12 +46,12 @@ public class Country extends TableImpl<CountryRecord> {
     }
 
     /**
-     * The column <code>voucher_agency.country.ID</code>.
+     * The column <code>sql4458432.country.ID</code>.
      */
     public final TableField<CountryRecord, Integer> ID = createField(DSL.name("ID"), SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>voucher_agency.country.NAME</code>.
+     * The column <code>sql4458432.country.NAME</code>.
      */
     public final TableField<CountryRecord, String> NAME = createField(DSL.name("NAME"), SQLDataType.VARCHAR(50), this, "");
 
@@ -64,21 +64,21 @@ public class Country extends TableImpl<CountryRecord> {
     }
 
     /**
-     * Create an aliased <code>voucher_agency.country</code> table reference
+     * Create an aliased <code>sql4458432.country</code> table reference
      */
     public Country(String alias) {
         this(DSL.name(alias), COUNTRY);
     }
 
     /**
-     * Create an aliased <code>voucher_agency.country</code> table reference
+     * Create an aliased <code>sql4458432.country</code> table reference
      */
     public Country(Name alias) {
         this(alias, COUNTRY);
     }
 
     /**
-     * Create a <code>voucher_agency.country</code> table reference
+     * Create a <code>sql4458432.country</code> table reference
      */
     public Country() {
         this(DSL.name("country"), null);
@@ -90,7 +90,7 @@ public class Country extends TableImpl<CountryRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : VoucherAgency.VOUCHER_AGENCY;
+        return aliased() ? null : Sql4458432.SQL4458432;
     }
 
     @Override

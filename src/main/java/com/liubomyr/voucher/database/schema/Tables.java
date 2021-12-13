@@ -15,48 +15,48 @@ import com.liubomyr.voucher.database.schema.tables.Voucher;
 
 
 /**
- * Convenience access to all tables in voucher_agency.
+ * Convenience access to all tables in sql4458432.
  */
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Tables {
 
     /**
-     * The table <code>voucher_agency.country</code>.
+     * The table <code>sql4458432.country</code>.
      */
     public static final Country COUNTRY = Country.COUNTRY;
 
     /**
-     * The table <code>voucher_agency.currency</code>.
+     * The table <code>sql4458432.currency</code>.
      */
     public static final Currency CURRENCY = Currency.CURRENCY;
 
     /**
-     * The table <code>voucher_agency.customer</code>.
+     * The table <code>sql4458432.customer</code>.
      */
     public static final Customer CUSTOMER = Customer.CUSTOMER;
 
     /**
-     * The table <code>voucher_agency.hotel</code>.
+     * The table <code>sql4458432.hotel</code>.
      */
     public static final Hotel HOTEL = Hotel.HOTEL;
 
     /**
-     * The table <code>voucher_agency.nutrition</code>.
+     * The table <code>sql4458432.nutrition</code>.
      */
     public static final Nutrition NUTRITION = Nutrition.NUTRITION;
 
     /**
-     * The table <code>voucher_agency.transport</code>.
+     * The table <code>sql4458432.transport</code>.
      */
     public static final Transport TRANSPORT = Transport.TRANSPORT;
 
     /**
-     * The table <code>voucher_agency.type</code>.
+     * The table <code>sql4458432.type</code>.
      */
     public static final Type TYPE = Type.TYPE;
 
     /**
-     * The table <code>voucher_agency.voucher</code>.
+     * The table <code>sql4458432.voucher</code>.
      */
     public static final Voucher VOUCHER = Voucher.VOUCHER;
 }

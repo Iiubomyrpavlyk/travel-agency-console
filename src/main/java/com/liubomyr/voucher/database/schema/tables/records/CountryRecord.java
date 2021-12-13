@@ -22,28 +22,28 @@ public class CountryRecord extends UpdatableRecordImpl<CountryRecord> implements
     private static final long serialVersionUID = 1L;
 
     /**
-     * Setter for <code>voucher_agency.country.ID</code>.
+     * Setter for <code>sql4458432.country.ID</code>.
      */
     public void setId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.country.ID</code>.
+     * Getter for <code>sql4458432.country.ID</code>.
      */
     public Integer getId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>voucher_agency.country.NAME</code>.
+     * Setter for <code>sql4458432.country.NAME</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.country.NAME</code>.
+     * Getter for <code>sql4458432.country.NAME</code>.
      */
     public String getName() {
         return (String) get(1);

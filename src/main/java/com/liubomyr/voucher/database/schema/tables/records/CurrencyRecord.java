@@ -22,42 +22,42 @@ public class CurrencyRecord extends UpdatableRecordImpl<CurrencyRecord> implemen
     private static final long serialVersionUID = 1L;
 
     /**
-     * Setter for <code>voucher_agency.currency.CURRENCY_ID</code>.
+     * Setter for <code>sql4458432.currency.CURRENCY_ID</code>.
      */
     public void setCurrencyId(Integer value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.currency.CURRENCY_ID</code>.
+     * Getter for <code>sql4458432.currency.CURRENCY_ID</code>.
      */
     public Integer getCurrencyId() {
         return (Integer) get(0);
     }
 
     /**
-     * Setter for <code>voucher_agency.currency.NAME</code>.
+     * Setter for <code>sql4458432.currency.NAME</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.currency.NAME</code>.
+     * Getter for <code>sql4458432.currency.NAME</code>.
      */
     public String getName() {
         return (String) get(1);
     }
 
     /**
-     * Setter for <code>voucher_agency.currency.DESCRIPTION</code>.
+     * Setter for <code>sql4458432.currency.DESCRIPTION</code>.
      */
     public void setDescription(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>voucher_agency.currency.DESCRIPTION</code>.
+     * Getter for <code>sql4458432.currency.DESCRIPTION</code>.
      */
     public String getDescription() {
         return (String) get(2);

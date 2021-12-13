@@ -5,7 +5,7 @@ package com.liubomyr.voucher.database.schema.tables;
 
 
 import com.liubomyr.voucher.database.schema.Keys;
-import com.liubomyr.voucher.database.schema.VoucherAgency;
+import com.liubomyr.voucher.database.schema.Sql4458432;
 import com.liubomyr.voucher.database.schema.tables.records.NutritionRecord;
 
 import org.jooq.Field;
@@ -33,7 +33,7 @@ public class Nutrition extends TableImpl<NutritionRecord> {
     private static final long serialVersionUID = 1L;
 
     /**
-     * The reference instance of <code>voucher_agency.nutrition</code>
+     * The reference instance of <code>sql4458432.nutrition</code>
      */
     public static final Nutrition NUTRITION = new Nutrition();
 
@@ -46,17 +46,17 @@ public class Nutrition extends TableImpl<NutritionRecord> {
     }
 
     /**
-     * The column <code>voucher_agency.nutrition.NUTRITION_ID</code>.
+     * The column <code>sql4458432.nutrition.NUTRITION_ID</code>.
      */
     public final TableField<NutritionRecord, Integer> NUTRITION_ID = createField(DSL.name("NUTRITION_ID"), SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>voucher_agency.nutrition.NAME</code>.
+     * The column <code>sql4458432.nutrition.NAME</code>.
      */
     public final TableField<NutritionRecord, String> NAME = createField(DSL.name("NAME"), SQLDataType.VARCHAR(2), this, "");
 
     /**
-     * The column <code>voucher_agency.nutrition.description</code>.
+     * The column <code>sql4458432.nutrition.description</code>.
      */
     public final TableField<NutritionRecord, String> DESCRIPTION = createField(DSL.name("description"), SQLDataType.VARCHAR(50), this, "");
 
@@ -69,21 +69,21 @@ public class Nutrition extends TableImpl<NutritionRecord> {
     }
 
     /**
-     * Create an aliased <code>voucher_agency.nutrition</code> table reference
+     * Create an aliased <code>sql4458432.nutrition</code> table reference
      */
     public Nutrition(String alias) {
         this(DSL.name(alias), NUTRITION);
     }
 
     /**
-     * Create an aliased <code>voucher_agency.nutrition</code> table reference
+     * Create an aliased <code>sql4458432.nutrition</code> table reference
      */
     public Nutrition(Name alias) {
         this(alias, NUTRITION);
     }
 
     /**
-     * Create a <code>voucher_agency.nutrition</code> table reference
+     * Create a <code>sql4458432.nutrition</code> table reference
      */
     public Nutrition() {
         this(DSL.name("nutrition"), null);
@@ -95,7 +95,7 @@ public class Nutrition extends TableImpl<NutritionRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : VoucherAgency.VOUCHER_AGENCY;
+        return aliased() ? null : Sql4458432.SQL4458432;
     }
 
     @Override

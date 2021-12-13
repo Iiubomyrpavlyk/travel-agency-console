@@ -5,7 +5,7 @@ package com.liubomyr.voucher.database.schema.tables;
 
 
 import com.liubomyr.voucher.database.schema.Keys;
-import com.liubomyr.voucher.database.schema.VoucherAgency;
+import com.liubomyr.voucher.database.schema.Sql4458432;
 import com.liubomyr.voucher.database.schema.tables.records.VoucherRecord;
 
 import java.time.LocalDate;
@@ -37,7 +37,7 @@ public class Voucher extends TableImpl<VoucherRecord> {
     private static final long serialVersionUID = 1L;
 
     /**
-     * The reference instance of <code>voucher_agency.voucher</code>
+     * The reference instance of <code>sql4458432.voucher</code>
      */
     public static final Voucher VOUCHER = new Voucher();
 
@@ -50,52 +50,52 @@ public class Voucher extends TableImpl<VoucherRecord> {
     }
 
     /**
-     * The column <code>voucher_agency.voucher.VOUCHER_ID</code>.
+     * The column <code>sql4458432.voucher.VOUCHER_ID</code>.
      */
     public final TableField<VoucherRecord, Integer> VOUCHER_ID = createField(DSL.name("VOUCHER_ID"), SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
-     * The column <code>voucher_agency.voucher.CUSTOMER_ID</code>.
+     * The column <code>sql4458432.voucher.CUSTOMER_ID</code>.
      */
     public final TableField<VoucherRecord, Integer> CUSTOMER_ID = createField(DSL.name("CUSTOMER_ID"), SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>voucher_agency.voucher.TYPE</code>.
+     * The column <code>sql4458432.voucher.TYPE</code>.
      */
     public final TableField<VoucherRecord, Integer> TYPE = createField(DSL.name("TYPE"), SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>voucher_agency.voucher.ARRIVAL</code>.
+     * The column <code>sql4458432.voucher.ARRIVAL</code>.
      */
     public final TableField<VoucherRecord, LocalDate> ARRIVAL = createField(DSL.name("ARRIVAL"), SQLDataType.LOCALDATE.nullable(false), this, "");
 
     /**
-     * The column <code>voucher_agency.voucher.DEPARTURE</code>.
+     * The column <code>sql4458432.voucher.DEPARTURE</code>.
      */
     public final TableField<VoucherRecord, LocalDate> DEPARTURE = createField(DSL.name("DEPARTURE"), SQLDataType.LOCALDATE.nullable(false), this, "");
 
     /**
-     * The column <code>voucher_agency.voucher.NUTRITION</code>.
+     * The column <code>sql4458432.voucher.NUTRITION</code>.
      */
     public final TableField<VoucherRecord, Integer> NUTRITION = createField(DSL.name("NUTRITION"), SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>voucher_agency.voucher.TRANSPORT</code>.
+     * The column <code>sql4458432.voucher.TRANSPORT</code>.
      */
     public final TableField<VoucherRecord, Integer> TRANSPORT = createField(DSL.name("TRANSPORT"), SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>voucher_agency.voucher.PAYMENT</code>.
+     * The column <code>sql4458432.voucher.PAYMENT</code>.
      */
     public final TableField<VoucherRecord, Integer> PAYMENT = createField(DSL.name("PAYMENT"), SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>voucher_agency.voucher.HOTEL_ID</code>.
+     * The column <code>sql4458432.voucher.HOTEL_ID</code>.
      */
     public final TableField<VoucherRecord, Integer> HOTEL_ID = createField(DSL.name("HOTEL_ID"), SQLDataType.INTEGER.nullable(false), this, "");
 
     /**
-     * The column <code>voucher_agency.voucher.COUNTRY_ID</code>.
+     * The column <code>sql4458432.voucher.COUNTRY_ID</code>.
      */
     public final TableField<VoucherRecord, Integer> COUNTRY_ID = createField(DSL.name("COUNTRY_ID"), SQLDataType.INTEGER.nullable(false), this, "");
 
@@ -108,21 +108,21 @@ public class Voucher extends TableImpl<VoucherRecord> {
     }
 
     /**
-     * Create an aliased <code>voucher_agency.voucher</code> table reference
+     * Create an aliased <code>sql4458432.voucher</code> table reference
      */
     public Voucher(String alias) {
         this(DSL.name(alias), VOUCHER);
     }
 
     /**
-     * Create an aliased <code>voucher_agency.voucher</code> table reference
+     * Create an aliased <code>sql4458432.voucher</code> table reference
      */
     public Voucher(Name alias) {
         this(alias, VOUCHER);
     }
 
     /**
-     * Create a <code>voucher_agency.voucher</code> table reference
+     * Create a <code>sql4458432.voucher</code> table reference
      */
     public Voucher() {
         this(DSL.name("voucher"), null);
@@ -134,7 +134,7 @@ public class Voucher extends TableImpl<VoucherRecord> {
 
     @Override
     public Schema getSchema() {
-        return aliased() ? null : VoucherAgency.VOUCHER_AGENCY;
+        return aliased() ? null : Sql4458432.SQL4458432;
     }
 
     @Override
