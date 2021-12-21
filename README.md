@@ -1,4 +1,4 @@
-# voucher-agency-NULP
+# travel-agency-console
 
 This console app uses:
   JOOQ lib  https://www.jooq.org/
